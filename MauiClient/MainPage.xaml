@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiClient.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Center">
+
+            <Label Text="Welcome to Maui Auth Client"
+                   FontSize="32"
+                   HorizontalOptions="Center" />
+
+            <Button x:Name="LoginBtn"
+                    Text="Login with AuthServer"
+                    Clicked="OnLoginClicked"
+                    HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="1" Color="Gray" />
+            
+            <Label Text="P2P Backup (Wifi)" FontSize="20" HorizontalOptions="Center"/>
+            
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button Text="Start Receiver" Clicked="OnStartReceiverClicked" />
+                <Button Text="Send File" Clicked="OnSendFileClicked" />
+            </HorizontalStackLayout>
+
+            <Editor x:Name="RawOutput"
+                       Placeholder="Logs will appear here..."
+                       HeightRequest="200"
+                       IsReadOnly="True" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
